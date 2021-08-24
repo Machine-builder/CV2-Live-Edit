@@ -19,7 +19,7 @@ import get_frame as get_frame
 # if you're working with smaller frames
 # (upscaled after processing is complete)
 upscale_to = (1000, 600)
-upscale = True
+upscale = False
 
 # show/hide error messages
 display_error_messages = True
