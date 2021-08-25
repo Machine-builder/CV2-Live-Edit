@@ -60,7 +60,7 @@ while 1:
     if current_update_mtime > last_update_mtime:
         last_update_mtime = current_update_mtime
 
-        filter_code = open('filter.py', 'r').read().split(
+        filter_code = open(filter_filename, 'r').read().split(
             '# start filter', 1)[-1].split(
             '# end filter', 1)[0]
         execution_valid = True
