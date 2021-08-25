@@ -89,9 +89,11 @@ while 1:
 
         # write some error message text onto the displayed image
         if not execution_valid:
-            cv2.rectangle(resized_image, (0, 0), (200, 25), (0, 0, 0), -1)
+            exception_msg = f"{filter_filename} exception"
+            (w, h), b = cv2.getTextSize(exception_msg, cv2.FONT_HERSHEY_COMPLEX, 0.6, 1)
+            cv2.rectangle(resized_image, (0, 0), (w+5, h+b+4), (0, 0, 0), -1)
             cv2.putText(resized_image,
-                        "filter.py exception", (2, 16),
+                        exception_msg, (2, 16),
                         cv2.FONT_HERSHEY_COMPLEX, 0.6,
                         (255, 255, 255), 1)
             if display_error_messages:
